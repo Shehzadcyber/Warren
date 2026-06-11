@@ -57,12 +57,6 @@ cp config.example.yaml config.yaml
 # then edit config.yaml and add whatever keys you have
 ```
 
-> ⚠️ **Never commit `config.yaml`.** It holds your API keys. The included `.gitignore` already excludes it — keep it that way, and if a key has ever been pasted or pushed anywhere, rotate it.
-
-Every key is optional. Leave blank what you don't have; those sources are simply skipped.
-
----
-
 ## Usage
 
 ```bash
@@ -133,6 +127,4 @@ Warren is for **authorized security testing only** — assets you own or have ex
 
 Issues and PRs welcome — new sources, permutation strategies, and resolver improvements especially. Keep the resilience contract: a new source must fail closed (log + skip), never crash the run.
 
-## License
 
-MIT — see [LICENSE](LICENSE).
