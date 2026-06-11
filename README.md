@@ -29,7 +29,7 @@ External binaries are *optional*. With none installed, Warren still runs every k
 ## Install
 
 ```bash
-git clone [https://github.com/<you>/warren.git](https://github.com/Shehzadcyber/Warren.git)
+git clone https://github.com/Shehzadcyber/Warren.git
 cd warren
 pip install -r requirements.txt        # aiohttp, pyyaml
 ```
