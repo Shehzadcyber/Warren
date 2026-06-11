@@ -1,0 +1,40 @@
+# ╔══════════════════════════════════════════════════════════════════════════╗
+# ║  Warren — example configuration                                          ║
+# ║  Copy to config.yaml and fill in your keys:  cp config.example.yaml config.yaml
+# ║  Any key left as "" is skipped gracefully — it never crashes the run.    ║
+# ║  These sources need NO key and always run:  crt.sh, HackerTarget, OTX,   ║
+# ║  Anubis (jldc), RapidDNS, Wayback, urlscan.                              ║
+# ╚══════════════════════════════════════════════════════════════════════════╝
+
+# ─── API Keys (all optional) ─────────────────────────────────────────────────
+securitytrails: ""
+virustotal:     ""
+shodan:         ""
+censys_id:      ""
+censys_secret:  ""
+zoomeye:        ""
+binaryedge:     ""
+chaos:          ""
+urlscan:        ""        # optional; raises rate limits if set
+
+# ─── Code-host scraping (personal access tokens, public/read scope) ──────────
+github_token:   ""
+gitlab_token:   ""
+
+# ─── Performance tuning ──────────────────────────────────────────────────────
+rate_limit_delay: 1
+tool_timeout: 300
+http_retries: 3
+http_timeout: 30
+resolve_concurrency: 100
+
+# ─── Permutation / probing ───────────────────────────────────────────────────
+permutation_cap: 50000
+permutation_builtin_resolve_cap: 8000
+recursive_limit: 25
+probe_concurrency: 50
+probe_timeout: 8
+
+# ─── Active resolution / brute-force ─────────────────────────────────────────
+resolvers_file: "/tmp/warren_resolvers.txt"
+wordlist: "/usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt"
